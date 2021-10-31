@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@700&family=Space+Mono:wght@700&display=swap");
+:root {
+  --selected-color: #F87070;
+  --selected-font: 'Kumbh Sans';
+}
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1E213F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--selected-font);
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .logo {
+  margin-block: 50px;
+}
+
+.wrapper .break-selector {
+  z-index: 10;
+  background: #161932;
+  width: 375px;
+  height: 65px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 7px;
+  margin-bottom: 45px;
+}
+
+.wrapper .break-selector button {
+  width: 32%;
+  height: 80%;
+  border-radius: 27px;
+  border: 0px;
+  outline: 0px;
+  background: none;
+  color: #D7E0FF;
+  opacity: .4;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.wrapper .break-selector button:hover {
+  background-color: var(--selected-color);
+  color: #1E213F;
+  cursor: pointer;
+}
+
+.wrapper .break-selector .selected {
+  color: #1E213F;
+  background: var(--selected-color);
+  opacity: 1;
+}
+
+.wrapper .timer-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  -webkit-box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+          box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+}
+
+.wrapper .timer-section .timer-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 360px;
+  height: 360px;
+  background-color: #161932;
+  border-radius: 50%;
+}
+
+.wrapper .timer-section .timer-container .timer {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  fill: #161932;
+}
+
+.wrapper .timer-section .timer-container .timer .progress {
+  stroke-width: 7px;
+  stroke: var(--selected-color);
+  stroke-linecap: round;
+  fill: #161932;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.wrapper .timer-section .timer-container .inner {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .timer-section .timer-container .inner h1 {
+  font-size: 100px;
+  color: white;
+}
+
+.wrapper .timer-section .timer-container .inner h2 {
+  position: absolute;
+  -webkit-transform: translateY(1050%);
+          transform: translateY(1050%);
+  font-size: 16px;
+  letter-spacing: 15px;
+  color: white;
+}
+
+.wrapper .timer-section .timer-container .inner h2:hover {
+  cursor: pointer;
+  text-shadow: 0px 0px 15px white;
+}
+
+.wrapper .settings {
+  background: none;
+  background-image: url(/assets/icon-settings.svg);
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  margin-block: 60px;
+}
+
+.wrapper .settings:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(200%);
+          filter: brightness(200%);
+}
+/*# sourceMappingURL=main.css.map */

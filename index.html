@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <main class="wrapper">
+    <img class="logo" src="/assets/logo.svg" alt="">
+    <section class="break-selector">
+      <button class="break selected">pomodoro</button>
+      <button class="break">short break</button>
+      <button class="break">long break</button>
+    </section>
+    <section class="timer-section">
+      <div class="timer-container">
+        <svg class="timer" width="250" height="250">
+          <circle r="100" cx="125" cy="125" class="track"></circle>
+          <circle r="100" cx="125" cy="125" class="progress"></circle>
+        </svg>
+        <div class="inner">
+          <h1 class="time">00:00</h1>
+          <h2>START</h2>
+        </div>
+      </div>
+    </section>
+    <button class="settings"></button>
+  </main>
+<script src="/js/timer.js"></script>
+</body>
+</html>
