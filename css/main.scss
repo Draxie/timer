@@ -111,16 +111,20 @@ body{
                 align-items: center;
 
                 h1{
-                    font-size: 100px;
+                    position: absolute;
+                    transform: translateY(-120%);
+                    font-size: 95px;
                     color: white;
+                    height: 125px;
                 }
 
                 h2{
                     position: absolute;
-                    transform: translateY(1050%);
+                    transform: translateY(250%);
                     font-size: 16px;
                     letter-spacing: 15px;
                     color: white;
+                    height: 20px;
                 }
 
                 h2:hover{
@@ -148,4 +152,255 @@ body{
         cursor: pointer;
         filter: brightness(200%);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.settings-section{
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba( #000000, .4);
+
+    .settings-form{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 540px;
+        height: 465px;
+        border-radius: 25px;
+
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding-inline: 40px;
+            height: 80px;
+
+            h1{
+                font-size: 28px;
+            }
+
+            button{
+                outline: none;
+                border: none;
+                background: none;
+            }
+
+            button:hover{
+                opacity: .6;
+                cursor: pointer;
+            }
+        }
+
+        hr{
+            width: 100%;
+            border-inline: 0px;
+            opacity: .2;
+            margin: 0px;
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding-inline: 40px;
+
+            .time{
+                display: flex;
+                flex-direction: column;
+                margin-block: 24px;
+                height: 105px;
+
+                h2{
+                    font-size: 13px;
+                    letter-spacing: 5px;
+                    margin: 0px;
+                    margin-bottom: 10px;
+                }
+
+                .time-options{
+                    display: flex;
+                    flex-direction: row;
+
+                    .option-container{
+                        box-sizing: border-box;
+                        padding-right: 22px;
+                    }
+
+                    .option-container:last-of-type{
+                        padding-right: 0px !important;
+                    }
+
+                    p{
+                        font-size: 12px;
+                        color: #1E213F;
+                        opacity: .4;
+                    }
+
+                    .input-field{
+                        background-color: #EFF1FA;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        border-radius: 10px;
+
+                        input{
+                            background: none;
+                            outline: none;
+                            border: none;
+                            width: 100%;
+                            box-sizing: border-box;
+                            padding-inline: 10px;
+                            color: #1E213F;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+
+                        input[type=number]::-webkit-inner-spin-button, 
+                        input[type=number]::-webkit-outer-spin-button { 
+                            -webkit-appearance: none; 
+                            margin: 0; 
+                        }
+
+                        input[type=number] { 
+                            -moz-appearance: textfield;
+                            appearance: textfield;
+                            margin: 0; 
+                        }
+
+                        .arrows{
+                            button{
+                                border: none;
+                                outline: none;
+                                background: none;
+                            }
+
+                            button:hover{
+                                cursor: pointer;
+                                filter: brightness(350%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .font,
+            .color{
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-block: 24px;
+
+                h2{
+                    font-size: 13px;
+                    letter-spacing: 5px;
+                }
+
+                .options{
+                    display: flex;
+                    flex-direction: row;
+
+                    button{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        outline: none;
+                        border: none;
+                        margin: 0px;
+                        margin-right: 16px;
+                    }
+
+                    button:last-of-type{
+                        margin: 0px;
+                    }
+
+                    .font1{font-family: 'Kumbh Sans' !important;}
+                    .font2{font-family: 'Roboto Slab' !important;}
+                    .font3{font-family: 'Space Mono' !important;}
+
+                    .color1{
+                        background-color: #F87070;
+                        background-repeat: no-repeat;
+                        background-position:center 58%;
+                    }
+
+                    .color2{
+                        background-color: #70F3F8;
+                        background-repeat: no-repeat;
+                        background-position:center 58%;
+                    }
+
+                    .color3{
+                        background-color: #D881F8;
+                        background-repeat: no-repeat;
+                        background-position:center 58%;}
+                    }
+
+                    .choosen-color{
+                        background-image: url(/assets/icon-check.png);
+                    }
+
+                    .choosen-font{
+                        background-color: black;
+                        color: white;
+                    }
+            }
+
+            .apply{
+                position: absolute;
+                width: 140px;
+                height: 55px;
+                outline: none;
+                border: none;
+                border-radius: 27px;
+                color: white;
+                background-color: var(--selected-color);
+                font-weight: bold;
+                font-size: 16px;
+                align-self: center;
+                transform: translateY(640%);
+            }
+
+           
+        }
+    }
+} 
+
+.bright-hover:hover{
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+.dark-hover:hover{
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.closed{
+    display: none !important; 
 }

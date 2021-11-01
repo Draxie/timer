@@ -160,17 +160,22 @@ body {
 }
 
 .wrapper .timer-section .timer-container .inner h1 {
-  font-size: 100px;
+  position: absolute;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  font-size: 95px;
   color: white;
+  height: 125px;
 }
 
 .wrapper .timer-section .timer-container .inner h2 {
   position: absolute;
-  -webkit-transform: translateY(1050%);
-          transform: translateY(1050%);
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
   font-size: 16px;
   letter-spacing: 15px;
   color: white;
+  height: 20px;
 }
 
 .wrapper .timer-section .timer-container .inner h2:hover {
@@ -193,5 +198,335 @@ body {
   cursor: pointer;
   -webkit-filter: brightness(200%);
           filter: brightness(200%);
+}
+
+.settings-section {
+  z-index: 100;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.settings-section .settings-form {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 540px;
+  height: 465px;
+  border-radius: 25px;
+}
+
+.settings-section .settings-form header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 40px;
+  height: 80px;
+}
+
+.settings-section .settings-form header h1 {
+  font-size: 28px;
+}
+
+.settings-section .settings-form header button {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.settings-section .settings-form header button:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
+.settings-section .settings-form hr {
+  width: 100%;
+  border-inline: 0px;
+  opacity: .2;
+  margin: 0px;
+}
+
+.settings-section .settings-form footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 40px;
+}
+
+.settings-section .settings-form footer .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-block: 24px;
+  height: 105px;
+}
+
+.settings-section .settings-form footer .time h2 {
+  font-size: 13px;
+  letter-spacing: 5px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.settings-section .settings-form footer .time .time-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.settings-section .settings-form footer .time .time-options .option-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 22px;
+}
+
+.settings-section .settings-form footer .time .time-options .option-container:last-of-type {
+  padding-right: 0px !important;
+}
+
+.settings-section .settings-form footer .time .time-options p {
+  font-size: 12px;
+  color: #1E213F;
+  opacity: .4;
+}
+
+.settings-section .settings-form footer .time .time-options .input-field {
+  background-color: #EFF1FA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+.settings-section .settings-form footer .time .time-options .input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-inline: 10px;
+  color: #1E213F;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.settings-section .settings-form footer .time .time-options .input-field input[type=number]::-webkit-inner-spin-button,
+.settings-section .settings-form footer .time .time-options .input-field input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.settings-section .settings-form footer .time .time-options .input-field input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  margin: 0;
+}
+
+.settings-section .settings-form footer .time .time-options .input-field .arrows button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.settings-section .settings-form footer .time .time-options .input-field .arrows button:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(350%);
+          filter: brightness(350%);
+}
+
+.settings-section .settings-form footer .font,
+.settings-section .settings-form footer .color {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-block: 24px;
+}
+
+.settings-section .settings-form footer .font h2,
+.settings-section .settings-form footer .color h2 {
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+
+.settings-section .settings-form footer .font .options,
+.settings-section .settings-form footer .color .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.settings-section .settings-form footer .font .options button,
+.settings-section .settings-form footer .color .options button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  margin: 0px;
+  margin-right: 16px;
+}
+
+.settings-section .settings-form footer .font .options button:last-of-type,
+.settings-section .settings-form footer .color .options button:last-of-type {
+  margin: 0px;
+}
+
+.settings-section .settings-form footer .font .options .font1,
+.settings-section .settings-form footer .color .options .font1 {
+  font-family: 'Kumbh Sans' !important;
+}
+
+.settings-section .settings-form footer .font .options .font2,
+.settings-section .settings-form footer .color .options .font2 {
+  font-family: 'Roboto Slab' !important;
+}
+
+.settings-section .settings-form footer .font .options .font3,
+.settings-section .settings-form footer .color .options .font3 {
+  font-family: 'Space Mono' !important;
+}
+
+.settings-section .settings-form footer .font .options .color1,
+.settings-section .settings-form footer .color .options .color1 {
+  background-color: #F87070;
+  background-repeat: no-repeat;
+  background-position: center 58%;
+}
+
+.settings-section .settings-form footer .font .options .color2,
+.settings-section .settings-form footer .color .options .color2 {
+  background-color: #70F3F8;
+  background-repeat: no-repeat;
+  background-position: center 58%;
+}
+
+.settings-section .settings-form footer .font .options .color3,
+.settings-section .settings-form footer .color .options .color3 {
+  background-color: #D881F8;
+  background-repeat: no-repeat;
+  background-position: center 58%;
+}
+
+.settings-section .settings-form footer .font .choosen-color,
+.settings-section .settings-form footer .color .choosen-color {
+  background-image: url(/assets/icon-check.png);
+}
+
+.settings-section .settings-form footer .font .choosen-font,
+.settings-section .settings-form footer .color .choosen-font {
+  background-color: black;
+  color: white;
+}
+
+.settings-section .settings-form footer .apply {
+  position: absolute;
+  width: 140px;
+  height: 55px;
+  outline: none;
+  border: none;
+  border-radius: 27px;
+  color: white;
+  background-color: var(--selected-color);
+  font-weight: bold;
+  font-size: 16px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: translateY(640%);
+          transform: translateY(640%);
+}
+
+.bright-hover:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.dark-hover:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  cursor: pointer;
+}
+
+.closed {
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */

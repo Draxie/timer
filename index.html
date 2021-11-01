@@ -22,12 +22,85 @@
         </svg>
         <div class="inner">
           <h1 class="time">00:00</h1>
-          <h2>START</h2>
+            <h2 id="start">START</h2>
         </div>
       </div>
     </section>
-    <button class="settings"></button>
+    <button class="settings" onclick="ToggleSettings()"></button>
   </main>
+
+
+
+
+  <section class="settings-section closed">
+    <div class="settings-form">
+      <header>
+        <h1>Settings</h1>
+        <button onclick="ToggleSettings()"><img src="/assets/icon-close.svg" alt=""></button>
+      </header>
+      <hr>
+      <footer>
+        <div class="time">
+          <h2>TIME (MINUTES)</h2>
+          <div class="time-options">
+            <div class="option-container">
+              <p>pomodoro</p>
+              <div class="input-field">
+                <input type="number" name="" id="custom-time" value="25" min="1" max="60">
+                <div class="arrows">
+                  <button onclick="IncreseValue(0)">
+                    <img src="/assets/icon-arrow-up.svg" alt="">
+                  </button>
+                  <button onclick="DecreseValue(0)">
+                    <img src="/assets/icon-arrow-down.svg" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="option-container">
+              <p>short break</p>
+              <div class="input-field">
+                <input type="number" name="" id="custom-time" value="5" min="1" max="60">
+                <div class="arrows">
+                  <button onclick="IncreseValue(1)"><img src="/assets/icon-arrow-up.svg" alt=""></button>
+                  <button onclick="DecreseValue(1)"><img src="/assets/icon-arrow-down.svg" alt=""></button>
+                </div>
+              </div>
+            </div>
+            <div class="option-container">
+              <p>long break</p>
+              <div class="input-field">
+                <input type="number" name="" id="custom-time" value="15" min="1" max="60">
+                <div class="arrows">
+                  <button onclick="IncreseValue(2)"><img src="/assets/icon-arrow-up.svg" alt=""></button>
+                  <button onclick="DecreseValue(2)"><img src="/assets/icon-arrow-down.svg" alt=""></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="font">
+          <h2>FONT</h2>
+          <div class="options">
+            <button id="font" class="font1 dark-hover choosen-font">Aa</button>
+            <button id="font" class="font2 dark-hover">Aa</button>
+            <button id="font" class="font3 dark-hover">Aa</button>
+          </div>
+        </div>
+        <hr>
+        <div class="color">
+          <h2>COLOR</h2>
+          <div class="options">
+            <button id="color" class="color1 bright-hover choosen-color"></button>
+            <button id="color" class="color2 bright-hover"></button>
+            <button id="color" class="color3 bright-hover"></button>
+          </div>
+        </div>
+        <button class="apply bright-hover">Apply</button>
+      </footer>
+    </div>
+  </section>
 <script src="/js/timer.js"></script>
 </body>
 </html>
