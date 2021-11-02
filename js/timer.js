@@ -105,20 +105,30 @@ colors.forEach((color) =>
 let progressCircle = document.querySelector(".progress");
 let radius = progressCircle.r.baseVal.value;
 let circumference = radius * 2 * Math.PI;
-let CountdownFrom = breaks[selectedBreakIndex].value * 60;
+let timePassed = breaks[selectedBreakIndex].value * 60;
 let start = document.getElementById('start')
-let isStarted = false;
-let isPaused = false;
-let isResumed = false;
+let timeDisplay = document.querySelector(".timeDisplay");
+let minutesPassed = 0;
+let secondsPassed = 0;
+let timerState = 'finished';
 
 start.addEventListener('click', function(){
 
-    if(!isStarted){
+    switch (timerState) {
+      case 'finished':
         StartTimer();
-        start.innerHTML='PAUSE'
-        isStarted=true;
+        timerState= 'running';
+        start.innerHTML= 'PAUSE';
+        break;
+      case 'running':
+        timerState= 'paused';
+        start.innerHTML= 'RESUME';
+        break;
+      case 'paused':
+        timerState= 'running';
+        start.innerHTML= 'PAUSE';
+        break;
     }
-    
 });
 
 progressCircle.style.strokeDasharray = circumference;
@@ -131,8 +141,31 @@ function setProgress(percent) {
 
 function StartTimer(){
     setInterval(function(){ 
-        CountdownFrom += 0.1;
-        setProgress((CountdownFrom * 100) / (customTimes[selectedBreakIndex].value * 60))
-        if(CountdownFrom=== customTimes[selectedBreakIndex].value * 60) clearInterval();
+      if(timerState === 'running')
+      {        
+        timePassed += 0.1;
+        setProgress((timePassed * 100) / (customTimes[selectedBreakIndex].value * 60));
+        UpdateDisplay()
+      }       
+
+      console.log(timePassed);
+      console.log(customTimes[selectedBreakIndex].value * 60);
+
+      if(timePassed >= customTimes[selectedBreakIndex].value * 60) 
+      {
+        clearInterval();
+        timerState = 'finished';
+        start.innerHTML= 'START';
+        timePassed = 0;
+        UpdateDisplay();
+      }
     }, 100);
+}
+
+function UpdateDisplay(){
+  if(parseInt((timePassed) / 60 ) < 10) minutesPassed = '0'+ parseInt((timePassed) / 60 );
+  else minutesPassed = parseInt((timePassed) / 60 );
+  if(parseInt((timePassed) % 60 ) < 10) secondsPassed = '0'+ parseInt((timePassed) % 60 );
+  else secondsPassed = parseInt((timePassed) % 60 );
+  timeDisplay.innerHTML = minutesPassed + ':' + secondsPassed;
 }
