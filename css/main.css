@@ -166,6 +166,8 @@ body {
   font-size: 95px;
   color: white;
   height: 125px;
+  width: 300px;
+  text-align: center;
 }
 
 .wrapper .timer-section .timer-container .inner h2 {
