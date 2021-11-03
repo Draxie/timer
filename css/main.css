@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@700&family=Space+Mono:wght@700&display=swap");
 :root {
-  --selected-color: #F87070;
-  --selected-font: 'Kumbh Sans';
+  --selected-color: #f87070;
+  --selected-font: "Kumbh Sans";
 }
 
 body,
@@ -13,7 +13,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #1E213F;
+  background-color: #1e213f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,20 +75,20 @@ body {
   border: 0px;
   outline: 0px;
   background: none;
-  color: #D7E0FF;
-  opacity: .4;
+  color: #d7e0ff;
+  opacity: 0.4;
   font-weight: bold;
   font-size: 14px;
 }
 
 .wrapper .break-selector button:hover {
   background-color: var(--selected-color);
-  color: #1E213F;
+  color: #1e213f;
   cursor: pointer;
 }
 
 .wrapper .break-selector .selected {
-  color: #1E213F;
+  color: #1e213f;
   background: var(--selected-color);
   opacity: 1;
 }
@@ -106,9 +106,9 @@ body {
   width: 410px;
   height: 410px;
   border-radius: 50%;
-  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
-  -webkit-box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
-          box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  -webkit-box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+          box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
 }
 
 .wrapper .timer-section .timer-container {
@@ -166,6 +166,7 @@ body {
   font-size: 95px;
   color: white;
   height: 125px;
+  line-height: 125px;
   width: 300px;
   text-align: center;
 }
@@ -178,6 +179,9 @@ body {
   letter-spacing: 15px;
   color: white;
   height: 20px;
+  width: 260px;
+  text-align: center;
+  margin-left: 15px;
 }
 
 .wrapper .timer-section .timer-container .inner h2:hover {
@@ -264,14 +268,14 @@ body {
 }
 
 .settings-section .settings-form header button:hover {
-  opacity: .6;
+  opacity: 0.6;
   cursor: pointer;
 }
 
 .settings-section .settings-form hr {
   width: 100%;
   border-inline: 0px;
-  opacity: .2;
+  opacity: 0.2;
   margin: 0px;
 }
 
@@ -329,12 +333,12 @@ body {
 
 .settings-section .settings-form footer .time .time-options p {
   font-size: 12px;
-  color: #1E213F;
-  opacity: .4;
+  color: #1e213f;
+  opacity: 0.4;
 }
 
 .settings-section .settings-form footer .time .time-options .input-field {
-  background-color: #EFF1FA;
+  background-color: #eff1fa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,18 +360,18 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-inline: 10px;
-  color: #1E213F;
+  color: #1e213f;
   font-size: 14px;
   font-weight: bold;
 }
 
-.settings-section .settings-form footer .time .time-options .input-field input[type=number]::-webkit-inner-spin-button,
-.settings-section .settings-form footer .time .time-options .input-field input[type=number]::-webkit-outer-spin-button {
+.settings-section .settings-form footer .time .time-options .input-field input[type="number"]::-webkit-inner-spin-button,
+.settings-section .settings-form footer .time .time-options .input-field input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.settings-section .settings-form footer .time .time-options .input-field input[type=number] {
+.settings-section .settings-form footer .time .time-options .input-field input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
           appearance: textfield;
@@ -453,36 +457,36 @@ body {
 
 .settings-section .settings-form footer .font .options .font1,
 .settings-section .settings-form footer .color .options .font1 {
-  font-family: 'Kumbh Sans' !important;
+  font-family: "Kumbh Sans" !important;
 }
 
 .settings-section .settings-form footer .font .options .font2,
 .settings-section .settings-form footer .color .options .font2 {
-  font-family: 'Roboto Slab' !important;
+  font-family: "Roboto Slab" !important;
 }
 
 .settings-section .settings-form footer .font .options .font3,
 .settings-section .settings-form footer .color .options .font3 {
-  font-family: 'Space Mono' !important;
+  font-family: "Space Mono" !important;
 }
 
 .settings-section .settings-form footer .font .options .color1,
 .settings-section .settings-form footer .color .options .color1 {
-  background-color: #F87070;
+  background-color: #f87070;
   background-repeat: no-repeat;
   background-position: center 58%;
 }
 
 .settings-section .settings-form footer .font .options .color2,
 .settings-section .settings-form footer .color .options .color2 {
-  background-color: #70F3F8;
+  background-color: #70f3f8;
   background-repeat: no-repeat;
   background-position: center 58%;
 }
 
 .settings-section .settings-form footer .font .options .color3,
 .settings-section .settings-form footer .color .options .color3 {
-  background-color: #D881F8;
+  background-color: #d881f8;
   background-repeat: no-repeat;
   background-position: center 58%;
 }
@@ -530,5 +534,138 @@ body {
 
 .closed {
   display: none !important;
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .logo {
+    margin-block: 40px;
+  }
+  .wrapper .break-selector {
+    width: 330px;
+  }
+  .wrapper .break-selector button {
+    font-size: 12px;
+  }
+  .wrapper .timer-section {
+    width: 300px;
+    height: 300px;
+  }
+  .wrapper .timer-section .timer-container {
+    width: 260px;
+    height: 260px;
+  }
+  .wrapper .timer-section .timer-container .timer {
+    -webkit-transform: scale(1.16);
+            transform: scale(1.16);
+  }
+  .wrapper .timer-section .timer-container .timer .progress {
+    stroke-width: 5px;
+  }
+  .wrapper .timer-section .timer-container .inner h1 {
+    -webkit-transform: translateY(-125%);
+            transform: translateY(-125%);
+    font-size: 70px;
+    height: 80px;
+    width: 260px;
+    line-height: 80px;
+  }
+  .wrapper .timer-section .timer-container .inner h2 {
+    -webkit-transform: translateY(230%);
+            transform: translateY(230%);
+    font-size: 13px;
+    letter-spacing: 10px;
+    margin-left: 10px;
+  }
+  .settings-section .settings-form {
+    width: 90%;
+    height: 540px;
+    border-radius: 15px;
+  }
+  .settings-section .settings-form header {
+    padding-inline: 20px;
+    height: 60px;
+  }
+  .settings-section .settings-form header h1 {
+    font-size: 20px;
+  }
+  .settings-section .settings-form footer {
+    padding-inline: 20px;
+  }
+  .settings-section .settings-form footer .time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-block: 24px;
+    height: 170px;
+  }
+  .settings-section .settings-form footer .time h2 {
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .settings-section .settings-form footer .time .time-options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .settings-section .settings-form footer .time .time-options .option-container {
+    padding-right: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .settings-section .settings-form footer .time .time-options .option-container + .option-container {
+    margin-top: 10px;
+  }
+  .settings-section .settings-form footer .time .time-options p {
+    font-size: 12px;
+    color: #1e213f;
+    opacity: 0.4;
+  }
+  .settings-section .settings-form footer .time .time-options .input-field {
+    height: 40px;
+  }
+  .settings-section .settings-form footer .font,
+  .settings-section .settings-form footer .color {
+    height: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-block: 14px;
+  }
+  .settings-section .settings-form footer .font h2,
+  .settings-section .settings-form footer .color h2 {
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+  .settings-section .settings-form footer .font .options,
+  .settings-section .settings-form footer .color .options {
+    margin-block: 10px;
+  }
+  .settings-section .settings-form footer .apply {
+    -webkit-transform: translateY(820%);
+            transform: translateY(820%);
+  }
 }
 /*# sourceMappingURL=main.css.map */
